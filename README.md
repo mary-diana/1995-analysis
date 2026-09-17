@@ -1,20 +1,16 @@
-Executive Summary: Impact of Trade Factors on GDP
+mpact of Trade Factors on GDP Growth | OLS Regression Analysis
 
-The final, robust regression model finds a statistically significant negative relationship between Customs Duties/GDP and GDP Growth. Simplifying the model by removing highly correlated, insignificant variables (TRADE OPENESS/GDP and NET X/GDP) was critical to achieving reliable results.
+This project investigates the relationship between international trade factors and GDP growth using Ordinary Least Squares (OLS) regression. Through rigorous diagnostic testing and iterative model refining, the study isolates the primary trade drivers impacting GDP performance.
 
-The single-predictor model using only CUSTOM/GDP is the most robust and parsimonious (simple yet effective) model for this dataset.
-The core finding is clear and reliable: Higher customs duties/tariffs (relative to GDP) are strongly and reliably associated with lower GDP growth.
+Key Findings
+* Tariffs Suppress Growth: The final model reveals a statistically significant negative relationship between Customs Duties (as a % of GDP) and overall GDP Growth.
 
-1.Initial Findings and Model Diagnostics:Conclusion of Initial Stage: The model suffered from severe multicollinearity, meaning the effects of CUSTOM/GDP and TRADE OPENESS/GDP could not be statistically separated
+* Parsimony Wins: Simplifying the model by dropping collinear, non-significant variables (TRADE OPENNESS/GDP and NET EXPORTS/GDP) significantly improved structural reliability without losing explanatory power.
 
-2. Model Refinement and Final Results
-To correct the high multicollinearity, the two insignificant variables (TRADE OPENESS/GDP and NET X/GDP) were removed, leading to the final, parsimonious model using only CUSTOM/GDP.
+Analytical Strategy & Diagnostics
+* Multicollinearity Resolution: Initial multi-variable specs suffered from high Variance Inflation Factor (VIF) scores, making it impossible to isolate individual effects. Removing redundant predictors eliminated multicollinearity.
 
-3.Variance Inflation Factor (VIF) and Multicollinearity
-Variance Inflation Factor (VIF) and Multicollinearity match and explains the challenges and steps taken in regression analyses.
-The data you provided here (VIF scores and Normality Tests) supports the high multicollinearity and justifies the model simplification that was performed.
+* Model Validation: The final single-predictor model (CUSTOM/GDP) satisfies key OLS assumptions, passing normality checks (Omnibus Prob = 0.551) with an acceptable independence profile (Durbin-Watson = 1.492).
 
-4. Final Diagnostic Check
--Durbin-Watson: 1.492
-oThis is still close to 1.5, which is slightly elevated but generally acceptable
--Normality (Prob(Omnibus): 0.551): The residuals are still normally distributed, confirming the standard OLS assumptions
+Tech Stack & Methods
+Python • Pandas • Statsmodels • OLS Regression • VIF Analysis • Hypothesis Testing
